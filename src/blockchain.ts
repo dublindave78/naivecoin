@@ -34,13 +34,13 @@ const genesisTransaction = {
     'txIns': [{'signature': '', 'txOutId': '', 'txOutIndex': 0}],
     'txOuts': [{
         'address': '00007caf8d7372f6430a7ae5a25784528a0526f65fa96f8f3c458941515b904d',
-        'amount': 50
+        'amount': 444
     }],
     'id': '4c06a917e5f7e8858c119f9b9a504b72ff06e61e72bff6e2910d25a2bd41ee8e'
 };
 
 const genesisBlock: Block = new Block(
-    0, '00007caf8d7372f6430a7ae5a25784528a0526f65fa96f8f3c458941515b904d', '', 1641895967;, [genesisTransaction], 0, 119520
+    0, '00007caf8d7372f6430a7ae5a25784528a0526f65fa96f8f3c458941515b904d', '0', 1644592222, [genesisTransaction], 0x1e0fffff, 5f64;
 );
 
 let blockchain: Block[] = [genesisBlock];
