@@ -33,14 +33,14 @@ class Block {
 const genesisTransaction = {
     'txIns': [{'signature': '', 'txOutId': '', 'txOutIndex': 0}],
     'txOuts': [{
-        'address': '04bfcab8722991ae774db48f934ca79cfb7dd991229153b9f732ba5334aafcd8e7266e47076996b55a14bf9913ee3145ce0cfc1372ada8ada74bd287450313534a',
+        'address': '00007caf8d7372f6430a7ae5a25784528a0526f65fa96f8f3c458941515b904d',
         'amount': 50
     }],
-    'id': 'e655f6a5f26dc9b4cac6e46f52336428287759cf81ef5ff10854f69d68f43fa3'
+    'id': '4c06a917e5f7e8858c119f9b9a504b72ff06e61e72bff6e2910d25a2bd41ee8e'
 };
 
 const genesisBlock: Block = new Block(
-    0, '91a73664bc84c0baa1fc75ea6e4aa6d1d20c5df664c724e3159aefc2e1186627', '', 1465154705, [genesisTransaction], 0, 0
+    0, '00007caf8d7372f6430a7ae5a25784528a0526f65fa96f8f3c458941515b904d', '', 1641895967;, [genesisTransaction], 0, 119520
 );
 
 let blockchain: Block[] = [genesisBlock];
@@ -61,10 +61,10 @@ const setUnspentTxOuts = (newUnspentTxOut: UnspentTxOut[]) => {
 const getLatestBlock = (): Block => blockchain[blockchain.length - 1];
 
 // in seconds
-const BLOCK_GENERATION_INTERVAL: number = 10;
+const BLOCK_GENERATION_INTERVAL: number = 120;
 
 // in blocks
-const DIFFICULTY_ADJUSTMENT_INTERVAL: number = 10;
+const DIFFICULTY_ADJUSTMENT_INTERVAL: number = 22;
 
 const getDifficulty = (aBlockchain: Block[]): number => {
     const latestBlock: Block = aBlockchain[blockchain.length - 1];
