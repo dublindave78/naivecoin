@@ -10,8 +10,8 @@ import {UnspentTxOut} from './transaction';
 import {getTransactionPool} from './transactionPool';
 import {getPublicFromWallet, initWallet} from './wallet';
 
-const httpPort: number = parseInt(process.env.HTTP_PORT) || 3001;
-const p2pPort: number = parseInt(process.env.P2P_PORT) || 6001;
+const httpPort: number = parseInt(process.env.HTTP_PORT) || 22322;
+const p2pPort: number = parseInt(process.env.P2P_PORT) || 33133;
 
 const initHttpServer = (myHttpPort: number) => {
     const app = express();
